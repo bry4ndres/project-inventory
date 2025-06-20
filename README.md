@@ -13,7 +13,7 @@ Abrir la solución del Backend con visual studio
 
 ### 1. Crear las Bases de Datos y Tablas
 
-- Ejecuta el script ubicado en la raíz del proyecto, en la carpeta `BDScript`.
+- Ejecuta el script ubicado en la raíz del proyecto, `BDScript`.
 - Se crearán dos bases de datos:
   - `ProductDB`
   - `TransactionDB`
