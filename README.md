@@ -65,7 +65,7 @@ TransactionService API
 
 # 🌐 Frontend - Angular 18
 
-Ubicarse en la carpeta Frontend
+Ubicarse en la carpeta Frontend desde el terminal o en vs code
 
 ## ✅ Requisitos
 
