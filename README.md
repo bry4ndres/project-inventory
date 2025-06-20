@@ -9,7 +9,7 @@
 
 ## ⚙️ Ejecución del Backend
 
-Abrir la solución cn visual studio
+Abrir la solución del Backend con visual studio
 
 ### 1. Crear las Bases de Datos y Tablas
 
@@ -63,7 +63,9 @@ TransactionService API
 ![image](https://github.com/user-attachments/assets/1101a686-ce34-42fd-8688-91e1d6baeeee)
 
 
-# 🌐 Web - Angular 18
+# 🌐 Frontend - Angular 18
+
+Ubicarse en la carpeta Frontend
 
 ## ✅ Requisitos
 
