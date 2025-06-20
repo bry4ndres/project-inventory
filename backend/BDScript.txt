@@ -1,0 +1,46 @@
+-- Crear base de datos ProductDB
+CREATE DATABASE ProductDB;
+GO
+
+USE ProductDB;
+GO
+
+-- Crear tabla Products
+CREATE TABLE Products (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(255) NULL,
+    Category NVARCHAR(100) NULL,
+    Image NVARCHAR(1000) NULL,
+    Price DECIMAL(18,2) NULL,
+    Stock INT NOT NULL,
+    IsDeleted BIT NOT NULL DEFAULT 0
+);
+GO
+
+-- Insertar datos de ejemplo en Products
+INSERT INTO Products (Name, Description, Category, Image, Price, Stock)
+VALUES 
+('Laptop Lenovo', 'Laptop empresarial', 'Electrónica', 'https://gigacomputers.com.ec/wp-content/uploads/v15-i5_1.jpg', 1200.00, 10),
+('Mouse', 'Mouse inalámbrico', 'Accesorios', 'https://d1gb7gicmr8iau.cloudfront.net/fit-in/600x450/Media/Images/Product/Visual/24271_pictures_product_visual_1.png', 25.50, 50);
+GO
+
+-- Crear base de datos TransactionDB
+CREATE DATABASE TransactionDB;
+GO
+
+USE TransactionDB;
+GO
+
+-- Crear tabla Transactions
+CREATE TABLE Transactions (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Date DATETIME2 NOT NULL,
+    TransactionType NVARCHAR(10) NOT NULL,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL,
+    UnitPrice DECIMAL(18,2) NOT NULL,
+    Detail NVARCHAR(255) NULL,
+    IsDeleted BIT NOT NULL DEFAULT 0
+);
+GO

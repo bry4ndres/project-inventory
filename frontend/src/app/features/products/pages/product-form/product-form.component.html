@@ -1,0 +1,55 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="max-w-md w-full mx-auto bg-white p-4 rounded shadow">
+    <h2 class="text-xl font-semibold mb-3 text-center">
+      {{ isEditMode ? 'Actualizar Producto' : 'Añadir Producto' }}
+    </h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-3">
+      <div>
+        <label class="block text-sm font-medium mb-1">Nombre</label>
+        <input type="text" formControlName="name" class="w-full border rounded p-1 text-sm" />
+        <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="text-red-500 text-xs">
+          Nombre es requerido.
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Descripción</label>
+        <input type="text" formControlName="description" class="w-full border rounded p-1 text-sm" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Categoría</label>
+        <input type="text" formControlName="category" class="w-full border rounded p-1 text-sm" />
+        <div *ngIf="form.get('category')?.invalid && form.get('category')?.touched" class="text-red-500 text-xs">
+          Categoría es requerida.
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Imagen URL</label>
+        <input type="text" formControlName="image" class="w-full border rounded p-1 text-sm" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Precio</label>
+        <input type="number" formControlName="price" class="w-full border rounded p-1 text-sm" />
+        <div *ngIf="form.get('price')?.invalid && form.get('price')?.touched" class="text-red-500 text-xs">
+          El precio es requerido.
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Stock</label>
+        <input type="number" formControlName="stock" class="w-full border rounded p-1 text-sm" />
+        <div *ngIf="form.get('stock')?.invalid && form.get('stock')?.touched" class="text-red-500 text-xs">
+          El stock es requerido.
+        </div>
+      </div>
+
+      <button type="submit" class="bg-blue-600 text-white px-3 py-1.5 rounded text-sm w-full" [disabled]="form.invalid">
+        {{ isEditMode ? 'Actualizar' : 'Añadir' }}
+      </button>
+    </form>
+  </div>
+</div>

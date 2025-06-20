@@ -1,0 +1,27 @@
+<div class="min-h-screen flex flex-col">
+  <header class="bg-blue-600 text-white py-4 shadow">
+    <h1 class="text-center text-2xl font-semibold">Inventario</h1>
+  </header>
+
+  <div class="flex flex-1">
+    <aside class="w-64 h-full  p-4 space-y-4">
+      <a
+        routerLink="/products"
+        routerLinkActive="font-semibold text-blue-600"
+        class="block hover:text-blue-600"
+      >
+        Productos
+      </a>
+      <a
+        routerLink="/transactions"
+        routerLinkActive="font-semibold text-blue-600"
+        class="block hover:text-blue-600"
+      >
+        Transacciones
+      </a>
+    </aside>
+    <main class="flex-1 bg-gray-50 p-6">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
